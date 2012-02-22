@@ -1,17 +1,19 @@
 LOCAL_PATH:= $(call my-dir)
 
+jit_SRC_FILES := \
+  Intercept.cpp \
+  JIT.cpp \
+  JITDebugRegisterer.cpp \
+  JITDwarfEmitter.cpp \
+  JITEmitter.cpp \
+  JITMemoryManager.cpp \
+  OProfileJITEventListener.cpp
+
 # For the host
 # =====================================================
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES :=	\
-	Intercept.cpp	\
-	JIT.cpp	\
-	JITDebugRegisterer.cpp	\
-	JITDwarfEmitter.cpp	\
-	JITEmitter.cpp	\
-	JITMemoryManager.cpp	\
-	OProfileJITEventListener.cpp
+LOCAL_SRC_FILES := $(jit_SRC_FILES)
 
 LOCAL_MODULE:= libLLVMJIT
 
@@ -24,8 +26,7 @@ include $(BUILD_HOST_STATIC_LIBRARY)
 # =====================================================
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES :=	\
-	JITMemoryManager.cpp
+LOCAL_SRC_FILES := $(jit_SRC_FILES)
 
 LOCAL_MODULE:= libLLVMJIT
 

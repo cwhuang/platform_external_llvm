@@ -24,6 +24,7 @@
 #include <algorithm>
 #include <limits>
 #include <utility>
+#include <cctype>
 
 using namespace llvm;
 using namespace object;

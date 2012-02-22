@@ -7,16 +7,23 @@ include $(CLEAR_VARS)
 subdirs := $(addprefix $(LOCAL_PATH)/,$(addsuffix /Android.mk, \
   lib/Analysis \
   lib/Analysis/IPA \
+  lib/Archive \
   lib/AsmParser \
   lib/Bitcode/Reader \
   lib/Bitcode/Writer \
+  lib/ExecutionEngine \
+  lib/ExecutionEngine/Interpreter \
   lib/ExecutionEngine/JIT \
+  lib/ExecutionEngine/MCJIT \
+  lib/ExecutionEngine/RuntimeDyld \
   lib/CodeGen \
   lib/CodeGen/AsmPrinter \
   lib/CodeGen/SelectionDAG \
   lib/Linker \
   lib/MC \
+  lib/MC/MCDisassembler \
   lib/MC/MCParser \
+  lib/Object \
   lib/Support \
   lib/TableGen \
   lib/Target \
