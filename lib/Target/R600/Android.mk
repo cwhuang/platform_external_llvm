@@ -66,6 +66,9 @@ LOCAL_MODULE_TAGS := optional
 include $(LLVM_HOST_BUILD_MK)
 include $(LLVM_TBLGEN_RULES_MK)
 include $(LLVM_GEN_INTRINSICS_MK)
+
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(generated_sources)
+
 include $(BUILD_HOST_STATIC_LIBRARY)
 
 # For the device only
@@ -85,5 +88,8 @@ LOCAL_MODULE_TAGS := optional
 include $(LLVM_DEVICE_BUILD_MK)
 include $(LLVM_TBLGEN_RULES_MK)
 include $(LLVM_GEN_INTRINSICS_MK)
+
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(generated_sources)
+
 include $(BUILD_STATIC_LIBRARY)
 endif

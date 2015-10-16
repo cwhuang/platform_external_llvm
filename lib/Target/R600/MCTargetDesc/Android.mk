@@ -22,11 +22,10 @@ include $(CLEAR_TBLGEN_VARS)
 LOCAL_MODULE:= libLLVMR600Desc
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := STATIC_LIBRARIES
+LOCAL_STATIC_LIBRARIES := libLLVMR600CodeGen
 
 LOCAL_SRC_FILES := $(AMDGPU_mc_desc_SRC_FILES)
-intermediates := $(call local-intermediates-dir)
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/.. \
-		$(intermediates)/../libLLVMR600CodeGen_intermediates/
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/..
 TBLGEN_TABLES := $(AMDGPU_mc_desc_TBLGEN_TABLES)
 TBLGEN_TD_DIR := $(LOCAL_PATH)/..
 
@@ -44,11 +43,10 @@ include $(CLEAR_TBLGEN_VARS)
 LOCAL_MODULE:= libLLVMR600Desc
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := STATIC_LIBRARIES
+LOCAL_STATIC_LIBRARIES := libLLVMR600CodeGen
 
 LOCAL_SRC_FILES := $(AMDGPU_mc_desc_SRC_FILES)
-intermediates := $(call local-intermediates-dir)
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/.. \
-		$(intermediates)/../libLLVMR600CodeGen_intermediates/
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/..
 TBLGEN_TABLES := $(AMDGPU_mc_desc_TBLGEN_TABLES)
 TBLGEN_TD_DIR := $(LOCAL_PATH)/..
 
